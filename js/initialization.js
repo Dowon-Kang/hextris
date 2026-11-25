@@ -5,26 +5,29 @@ function initialize(a) {
 	window.rush = 1;
 	window.lastTime = Date.now();
 	window.iframHasLoaded = false;
-	window.colors = ["#e74c3c", "#f1c40f", "#3498db", "#2ecc71"];
+	// [OSS Playground 수정] 블록 색상 테마 변경: 빨강/노랑/파랑/초록 -> 핑크/보라/민트/오렌지
+	// colors 배열만 바꾸면 안 되고, 아래 3개의 색상 매핑 테이블도 같은 색으로 맞춰야
+	// 시작 화면의 흐린 블록(tinted)과 저장된 게임 불러오기(rgbToHex)가 정상 동작한다.
+	window.colors = ["#ff6b9d", "#9b59b6", "#1abc9c", "#ff9f43"];
 	window.hexColorsToTintedColors = {
-		"#e74c3c": "rgb(241,163,155)",
-		"#f1c40f": "rgb(246,223,133)",
-		"#3498db": "rgb(151,201,235)",
-		"#2ecc71": "rgb(150,227,183)"
+		"#ff6b9d": "rgb(255,181,206)",
+		"#9b59b6": "rgb(205,172,218)",
+		"#1abc9c": "rgb(140,222,206)",
+		"#ff9f43": "rgb(255,207,161)"
 	};
 
 	window.rgbToHex = {
-		"rgb(231,76,60)": "#e74c3c",
-		"rgb(241,196,15)": "#f1c40f",
-		"rgb(52,152,219)": "#3498db",
-		"rgb(46,204,113)": "#2ecc71"
+		"rgb(255,107,157)": "#ff6b9d",
+		"rgb(155,89,182)": "#9b59b6",
+		"rgb(26,188,156)": "#1abc9c",
+		"rgb(255,159,67)": "#ff9f43"
 	};
 
 	window.rgbColorsToTintedColors = {
-		"rgb(231,76,60)": "rgb(241,163,155)",
-		"rgb(241,196,15)": "rgb(246,223,133)",
-		"rgb(52,152,219)": "rgb(151,201,235)",
-		"rgb(46,204,113)": "rgb(150,227,183)"
+		"rgb(255,107,157)": "rgb(255,181,206)",
+		"rgb(155,89,182)": "rgb(205,172,218)",
+		"rgb(26,188,156)": "rgb(140,222,206)",
+		"rgb(255,159,67)": "rgb(255,207,161)"
 	};
 
 	window.hexagonBackgroundColor = 'rgb(236, 240, 241)';
@@ -82,9 +85,9 @@ function initialize(a) {
 			baseBlockHeight: 20,
 			blockHeight: 15,
 			rows: 8,
-			speedModifier: 0.65,
+			speedModifier: 0.5, // [OSS Playground 수정] 0.65 -> 0.5 : 블록 낙하 속도 감소(초보자용)
 			speedUpKeyHeld: false,
-			creationSpeedModifier: 0.65,
+			creationSpeedModifier: 0.5, // [OSS Playground 수정] 0.65 -> 0.5 : 블록 생성 간격 증가
 			comboTime: 310
 		};
 

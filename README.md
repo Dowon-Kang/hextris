@@ -1,6 +1,19 @@
 Hextris
 ==========
 
+> **OSS Playground Edition (fork by [Dowon-Kang](https://github.com/Dowon-Kang))**
+> 한신대학교 「오픈소스SW 개론」 과제 *OSS Playground Hunter*를 위해 원본 [Hextris/hextris](https://github.com/Hextris/hextris)를 Fork하여 수정한 버전입니다.
+> Play: https://dowon-kang.github.io/hextris/
+>
+> **변경 사항 (GPL-3.0 §5(a) 수정 고지, 2026-11-26)**
+> - `js/initialization.js`: 블록 색상 테마 변경(핑크/보라/민트/오렌지) 및 색상 매핑 테이블 3종 동기화, 데스크톱 블록 속도 `speedModifier`·`creationSpeedModifier` 0.65 → 0.5
+> - `js/view.js`: 시작 화면 문구 `Play!` → `시작!`
+> - `js/main.js`: 도움말의 콤보 색상 안내를 새 테마 색으로 변경
+> - `index.html`: Google Fonts를 HTTPS로 불러오도록 수정(Mixed Content 차단 해결)
+> - `CNAME` 삭제(Fork를 GitHub Pages로 배포하기 위함)
+>
+> 원본과 동일하게 GNU GPL v3.0 라이선스를 따릅니다.
+
 <img src="images/twitter-opengraph.png" width="100px"><br>
 
 An addictive puzzle game inspired by Tetris. Play it at [www.hextris.io](http://www.hextris.io), or [https://hextris.github.io/hextris](https://hextris.github.io/hextris).
